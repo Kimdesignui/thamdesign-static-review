@@ -143,6 +143,15 @@ img {
 	font-size: 0.9rem;
 }
 
+.main-nav ul {
+	display: flex;
+	align-items: center;
+	gap: 26px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .main-nav li {
 	margin: 0;
 	padding: 0;
@@ -711,6 +720,12 @@ textarea:focus {
 		border: 1px solid var(--line);
 		border-radius: 22px;
 		background: rgba(10, 7, 34, 0.94);
+	}
+
+	.main-nav ul {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 2px;
 	}
 
 	.main-nav.is-open {
