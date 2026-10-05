@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="pencilBody" x1="14" y1="48" x2="52" y2="11" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF75D4"/>
+      <stop offset="0.52" stop-color="#C095FF"/>
+      <stop offset="1" stop-color="#72DBFF"/>
+    </linearGradient>
+  </defs>
+  <path d="m15.7 48.3-1.2-9.4L45.6 7.8a5.1 5.1 0 0 1 7.2 0l3.4 3.4a5.1 5.1 0 0 1 0 7.2L25.1 49.5l-9.4-1.2Z" fill="url(#pencilBody)" stroke="#F9F5FF" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="m40.8 12.6 10.6 10.6M14.5 38.9l10.6 10.6" stroke="#281348" stroke-width="3" stroke-linecap="round"/>
+  <path d="m14.5 38.9 10.6 10.6-9.4-1.2-1.2-9.4Z" fill="#171022" stroke="#F9F5FF" stroke-width="2.8" stroke-linejoin="round"/>
+  <path d="m17.5 43.5 3 3" stroke="#FFB9EB" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,22 @@
+/* Homepage project view controls. Layout stays native CSS Grid in both modes. */
+.tham-projects { --project-gap: 18px; --project-columns: 3; }
+.tham-project-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.tham-project-toolbar[hidden], .tham-project-navigation[hidden] { display: none; }
+.tham-project-modes { display: flex; padding: 3px; gap: 3px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.035); }
+.tham-project-navigation { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.tham-projects .tham-project-control { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; width: 40px; height: 40px; min-height: 40px; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; color: white; background: rgba(255,255,255,.04); line-height: 1.2; cursor: pointer; transition: background-color .18s ease, border-color .18s ease; }
+.tham-project-modes .tham-project-control { border-color: transparent; background: transparent; }
+.tham-projects .tham-project-control[aria-pressed="true"] { background: var(--purple); border-color: var(--purple); }
+.tham-projects .tham-project-control:disabled { opacity: .35; cursor: default; }
+.tham-projects .tham-project-control:focus-visible, .tham-projects .work-grid:focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
+.tham-projects .tham-project-control:hover:not(:disabled):not([aria-pressed="true"]) { background: rgba(141,92,255,.2); border-color: var(--purple); }
+.tham-projects .tham-project-icon { display: block; width: 20px; height: 20px; margin: 0; object-fit: contain; }
+.tham-project-position { min-width: 74px; text-align: right; color: var(--muted); font: 400 14px/1.4 Inter, "Open Sans", sans-serif; font-variant-numeric: tabular-nums; }
+.tham-projects .work-grid { gap: var(--project-gap); grid-template-columns: repeat(var(--project-columns), minmax(0,1fr)); }
+.tham-projects .work-card > a { display: flex; flex-direction: column; height: 100%; }
+.tham-projects.is-carousel .work-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - (var(--project-columns) - 1)*var(--project-gap))/var(--project-columns)); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 8px 0 14px; }
+.tham-projects.is-carousel .work-grid::-webkit-scrollbar { display: none; }
+.tham-projects.is-carousel .work-card { scroll-snap-align: start; }
+@media(max-width:980px) { .tham-projects { --project-columns: 2; } }
+@media(max-width:640px) { .tham-projects { --project-columns: 1; } .tham-project-toolbar { gap: 10px; } .tham-project-navigation { gap: 6px; } .tham-project-position { min-width: 54px; font-size: 14px; } }
+@media(prefers-reduced-motion:reduce) { .tham-projects .tham-project-control { transition: none; } }
